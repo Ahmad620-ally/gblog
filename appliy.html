@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Multi-Page Example</title>
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-color: #f8f9fa;
+			color: #343a40;
+		}
+
+		.container, .Homepage, .application {
+			background-color: #ffffff;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			max-width: 800px;
+			width: 100%;
+			margin: 20px;
+		}
+
+		h1, h2 {
+			color: #007BFF;
+		}
+
+		p {
+			color: #6c757d;
+		}
+
+		button {
+			background-color: #007BFF;
+			color: #ffffff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #0056b3;
+		}
+
+		input[type="text"], input[type="password"], input[type="date"], select {
+			width: 100%;
+			padding: 10px;
+			margin: 10px 0;
+			border: 1px solid #ced4da;
+			border-radius: 5px;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+
+		table, th, td {
+			border: 1px solid #dee2e6;
+		}
+
+		th, td {
+			padding: 15px;
+			text-align: left;
+		}
+
+		th {
+			background-color: #e9ecef;
+		}
+
+		.menu {
+			margin-top: 20px;
+		}
+
+		.service-item {
+			border: 1px solid #dee2e6;
+			padding: 20px;
+			margin: 10px 0;
+			text-align: left;
+			display: flex;
+			align-items: center;
+		}
+
+		.service-item img {
+			margin-right: 20px;
+			border-radius: 5px;
+		}
+
+		.service-item h3 {
+			margin: 0;
+			color: #007BFF;
+		}
+
+		.service-item p {
+			margin: 5px 0;
+			color: #6c757d;
+		}
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: #f0f0f0;
+		}
+		.container, .Homepage {
+			text-align: center;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.hidden {
+			display: none;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		form {
+			margin-top: 20px;
+		}
+		h1, h2 {
+			color: #333;
+		}
+		p {
+			color: #666;
+		}
+		button {
+			background-color: #007BFF;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #0056b3;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+		table, th, td {
+			border: 1px solid #ddd;
+		}
+		th, td {
+			padding: 10px;
+			text-align: left;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+		.menu {
+			margin-top: 20px;
+		}
+		.service-item {
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin: 10px 0;
+			text-align: left;
+		}
+		.service-item img {
+			float: left;
+			margin-right: 10px;
+		}
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: #f0f0f0;
+		}
+		.container {
+			text-align: center;
+		}
+		.hidden {
+			display: none;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		form {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="page1" class="container">
+		<h1><b>Web@k</b></h1>
+		<hr />
+		<h2>Welcome to Web@k</h2>
+		<p><i>This platform provides user with several services that are within our range</i></p>
+		<img src="https://via.placeholder.com/150" alt="Sample Image" width="600" height="450">
+		<img src="https://via.placeholder.com/300" alt="Google-like Image" width="600" height="450">
+		<form action="submit_form.php" method="post">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required><br><br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required><br><br>
+			<button type="submit">Login</button>
+		</form>
+		<p>Click the button below to proceed to the next page.</p>
+		<button onclick="showPage2()">Next Page</button>
+	</div>
+
+	<div id="page2" class="container hidden">
+		<h1>Our Services</h1>
+		<img src="https://via.placeholder.com/300" alt="Advertisement Image">
+		<form>
+			<label for="services">Select a service:</label>
+			<select id="services" name="services">
+				<option value="web_design">Web Design</option>
+				<option value="seo">SEO Optimization</option>
+				<option value="digital_marketing">Digital Marketing</option>
+				<option value="content_creation">Content Creation</option>
+			</select><br><br>
+			<button type="button" onclick="showPage3()">Proceed to Homepage</button>
+
+			<script>
+				function showPage3() {
+					document.getElementById('page2').classList.add('hidden');
+					document.getElementById('page3').classList.remove('hidden');
+				}
+			</script>
+		</form>
+	</div>
+    
+	<div id="page3" class="Homepage">
+		<h1>Welcome to Web@k Homepage</h1>
+		<hr />
+		<p>Explore our wide range of services and offerings. We are here to provide you with the best experience possible.</p>
+		<img src="https://via.placeholder.com/400" alt="Homepage Image">
+		<p>Feel free to navigate through our website to learn more about what we offer.</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Service</th>
+					<th>Description</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Web Design</td>
+					<td>Creating visually appealing and user-friendly websites.</td>
+					<td>$500</td>
+				</tr>
+				<tr>
+					<td>SEO Optimization</td>
+					<td>Improving your website's visibility on search engines.</td>
+					<td>$300</td>
+				</tr>
+				<tr>
+					<td>Digital Marketing</td>
+					<td>Promoting your brand through digital channels.</td>
+					<td>$400</td>
+				</tr>
+				<tr>
+					<td>Content Creation</td>
+					<td>Producing high-quality content for your website.</td>
+					<td>$250</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="menu">
+			<h2>Our Services Menu</h2>
+			<div class="service-item">
+				<img src="https://via.placeholder.com/100" alt="Web Design">
+				<h3>Web Design</h3>
+				<p>Creating visually appealing and user-friendly websites.</p>
+				<p>Price: $500</p>
+			</div>
+			<div class="service-item">
+				<img src="https://via.placeholder.com/100" alt="SEO Optimization">
+				<h3>SEO Optimization</h3>
+				<p>Improving your website's visibility on search engines.</p>
+				<p>Price: $300</p>
+			</div>
+			<div class="service-item">
+				<img src="https://via.placeholder.com/100" alt="Digital Marketing">
+				<h3>Digital Marketing</h3>
+				<p>Promoting your brand through digital channels.</p>
+				<p>Price: $400</p>
+			</div>
+			<div class="service-item">
+				<img src="https://via.placeholder.com/100" alt="Content Creation">
+				<h3>Content Creation</h3>
+				<p>Producing high-quality content for your website.</p>
+				<p>Price: $250</p>
+			</div>
+		</div>
+		<style>
+			.menu {
+				margin-top: 20px;
+			}
+			.service-item {
+				border: 1px solid #ccc;
+				padding: 10px;
+				margin: 10px 0;
+				text-align: left;
+			}
+			.service-item img {
+				float: left;
+				margin-right: 10px;
+			}
+		</style>
+		<button onclick="showPage1()">Go to Login Page</button>
+		<button onclick="showPage2()">Go to Services Page</button>
+
+		<script>
+			function showPage1() {
+				document.getElementById('page3').classList.add('hidden');
+				document.getElementById('page1').classList.remove('hidden');
+			}
+			function showPage2() {
+				document.getElementById('page3').classList.add('hidden');
+				document.getElementById('page2').classList.remove('hidden');
+			}
+		</script>
+	</div>
+
+	<div id="page 4" class="application">
+	<h1>Apply for a Service</h1>
+	<form action="submit_application.php" method="post" enctype="multipart/form-data">
+		<label for="service">Select a service:</label>
+		<select id="service" name="service" required>
+			<option value="web_design">Web Design</option>
+			<option value="seo">SEO Optimization</option>
+			<option value="digital_marketing">Digital Marketing</option>
+			<option value="content_creation">Content Creation</option>
+		</select><br><br>
+		<label for="biometrics">Upload your document with biometrics:</label>
+		<input type="file" id="biometrics" name="biometrics" accept=".pdf,.doc,.docx" required><br><br>
+		<label for="expected_date">Expected date of service:</label>
+		<input type="date" id="expected_date" name="expected_date" required><br><br>
+		<button type="submit">Submit Application</button>
+		<script>
+			document.querySelector('form').addEventListener('submit', function(event) {
+				const service = document.getElementById('service').value;
+				const biometrics = document.getElementById('biometrics').files[0];
+				const expectedDate = document.getElementById('expected_date').value;
+
+				if (!service) {
+					alert('Please select a service.');
+					event.preventDefault();
+					return;
+				}
+
+				if (!biometrics) {
+					alert('Please upload your document with biometrics.');
+					event.preventDefault();
+					return;
+				}
+
+				if (!expectedDate) {
+					alert('Please select an expected date of service.');
+					event.preventDefault();
+					return;
+				}
+
+				const today = new Date().toISOString().split('T')[0];
+				if (expectedDate < today) {
+					alert('Expected date of service cannot be in the past.');
+					event.preventDefault();
+					return;
+				}
+			});
+		</script>
+	</form>
+	<button onclick="showPage3()">Back to Homepage</button>
+
+	<script>
+		function showPage3() {
+			document.getElementById('page4').classList.add('hidden');
+			document.getElementById('page3').classList.remove('hidden');
+		}
+	</script>
+	</div>
+
+	<script>
+		function showPage2() {
+			document.getElementById('page1').classList.add('hidden');
+			document.getElementById('page2').classList.remove('hidden');
+		}
+	</script>
+</body>
+</html>
